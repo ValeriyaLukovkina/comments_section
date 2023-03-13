@@ -1,0 +1,354 @@
+@font-face {
+    font-family: 'OpenSans';
+    src: url('./assests/font/OpenSans-Light.ttf');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    src: url('./assests/font/OpenSans-LightItalic.ttf');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    src: url('./assests/font/OpenSans-Regular.ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    src: url('./assests/font/OpenSans-RegularItalic.ttf');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    src: url('./assests/font/OpenSans-Semibold.ttf');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    src: url('./assests/font/OpenSans-SemiboldItalic.ttf');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    src: url('./assests/font/OpenSans-Bold.ttf');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    src: url('./assests/font/OpenSans-BoldItalic.ttf');
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    src: url('./assests/font/OpenSans-ExtraBold.ttf');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    src: url('./assests/font/OpenSans-ExtraBoldItalic.ttf');
+    font-weight: 800;
+    font-style: italic;
+}
+
+$blue: #3699FF;
+$grey: #D4D6D7;
+$dark-grey: #444;
+$white: #ffffff;
+$grey-date: #999999;
+$grey-txt: #3F4254;
+$color-bgc: #F5F6FA;
+$red: #ff3347;
+
+$b-radius: 5px;
+
+$margin: 20px;
+$padding-input: 10px;
+
+$size-txt: 16px;
+$smallsize-txt: 12px;
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'OpenSans';
+    font-size: $size-txt;
+    font-weight: 400;
+    font-style: normal;
+    color: $grey-txt;
+}
+
+body {
+    max-width: 1240px;
+    margin: 0 auto;
+    background-color: $color-bgc;
+}
+
+.wrp {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 32px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.info {
+    // display: none;
+}
+
+.add {
+
+    &-comments {
+        margin-top: $margin;
+
+        &_block {
+            position: relative;
+            width: 100%;
+            margin-top: $margin;
+
+
+            &_txt {
+                width: 100%;
+                height: 170px;
+                resize: none;
+                padding: $padding-input;
+                border: $grey 1px solid;
+                border-radius: $b-radius;
+                background-color: $white;
+
+                &_error {
+                    border: $red 1px solid;
+                }
+
+                &:focus {
+                    border: $blue 1px solid;
+                    outline: none;
+                }
+            }
+
+            &_set {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                display: flex;
+                align-items: center;
+
+                &_btn {
+
+                    &_bold,
+                    &_italic,
+                    &_code {
+                        margin: 10px;
+                        border: none;
+                        background: transparent;
+                        opacity: 0.5;
+
+                        &:hover {
+                            opacity: 1;
+                        }
+                    }
+
+                    &_active {
+                        opacity: 1;
+                    }
+
+                    &_svg {
+                        color: #444;
+                        width: 15px;
+                        height: 15px;
+                    }
+                }
+            }
+
+            &_error {
+                position: absolute;
+                visibility: hidden;
+                bottom: -15px;
+                max-height: 20px;
+                left: 0px;
+                // padding: 5px;
+
+                &_txt {
+                    color: $red;
+                    font-size: 12px;
+                }
+
+                &_show {
+                    visibility: visible;
+                }
+            }
+        }
+
+        &_info {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-top: $margin;
+
+
+            &_block {
+                display: flex;
+                flex-direction: column;
+                width: 30%;
+                margin-right: $margin;
+            }
+
+            &_label {
+                cursor: pointer;
+            }
+
+            &_input {
+                margin-top: $margin/2;
+                outline: none;
+                color: $grey-txt;
+                background-color: $white;
+                border-radius: $b-radius;
+                border: 1px $grey solid;
+                padding: $padding-input;
+                width: 100%;
+                height: 50px;
+
+                &:focus {
+                    border: 1px $blue solid;
+                }
+            }
+
+            &_name {
+                position: relative;
+
+                &_input_error {
+                    border: 1px $red solid;
+                }
+
+                &_error {
+                    position: absolute;
+                    visibility: hidden;
+                    bottom: -20px;
+                    max-height: 20px;
+                    left: 0px;
+                    // padding: 5px;
+
+                    &_txt {
+                        color: $red;
+                        font-size: 12px;
+                    }
+
+                    &_show {
+                        visibility: visible;
+                    }
+                }
+            }
+        }
+
+        &_submit {
+            margin-top: $margin;
+            outline: 0px;
+            cursor: pointer;
+            padding: 10px 20px;
+            white-space: nowrap;
+            color: $white;
+            font-size: 14px;
+            background-color: $blue;
+            border-radius: $b-radius;
+            border: none;
+            width: 30%;
+            height: 50px;
+            cursor: pointer;
+            transition: all .5s;
+
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+    }
+}
+
+.comments {
+    margin-top: $margin*3;
+
+    &-block {
+        position: relative;
+        padding: 20px;
+        margin-bottom: $margin;
+        background-color: $white;
+
+        &_username {
+            font-size: 18px;
+            color: $blue;
+            margin: 0px 0px 6px;
+            padding: 0px;
+        }
+
+        &_date {
+            color: $grey-date;
+            font-size: $smallsize-txt;
+            line-height: 12.5px;
+        }
+
+        &_txt {
+            margin-bottom: 10px;
+            word-wrap: break-word;
+        }
+    }
+
+    &-like {
+        position: absolute;
+        bottom: 10px;
+        right: 20px;
+        opacity: 0.8;
+        transition: all .5s;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 1;
+            transform: scale(1.3);
+        }
+    }
+
+    &-trash {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        opacity: 0.8;
+        transition: all .5s;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 1;
+            transform: scale(1.2);
+        }
+    }
+
+    // &-info {
+    //     &_list {
+    //         list-style-type: none;
+    //         list-style-position: inside;
+    //         display: flex;
+    //         align-items: center;
+    //     }
+    // }
+}
+
+// svg {
+//     color: blue;
+// }

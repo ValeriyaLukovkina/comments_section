@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Comments</title>
+
+</head>
+
+<body>
+    <div class="wrp">
+        <h1 class="title">Comments</h1>
+        <div class="add">
+            <form class="add-comments">
+                <div class="add-comments_block">
+                    <textarea class="add-comments_block_txt"></textarea>
+                    <!-- <div class="add-comments_block_set">
+                        <button class="add-comments_block_set_btn_bold" title="Жирный" type="button">
+                            <svg class="add-comments_block_set_btn_svg" viewBox="0 0 18 22" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M1.80005 10.9999V20.5999H11.7693C14.4202 20.5999 16.5693 18.4509 16.5693 15.7999C16.5693 13.1489 14.4202 10.9999 11.7693 10.9999H1.80005ZM1.80005 10.9999H10.2924C12.9433 10.9999 15.0924 8.85087 15.0924 6.1999C15.0924 3.54894 12.9433 1.3999 10.2924 1.3999H1.80005V10.9999Z"
+                                    stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <button class="add-comments_block_set_btn_italic" title="Курсив" type="button">
+                            <svg class="add-comments_block_set_btn_svg" viewBox="0 0 18 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M6.35029 18.4001L11.2036 1.6001M6.35029 18.4001H1.30029M6.35029 18.4001H11.4003M11.2036 1.6001H6.15363M11.2036 1.6001H16.2536"
+                                    stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <button class="add-comments_block_set_btn" type="button">
+                            <svg class="add-comments_block_set_btn_svg" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M1.89292 18.0928C1.50239 18.4833 1.50239 19.1165 1.89292 19.507C2.28344 19.8975 2.91661 19.8975 3.30713 19.507L1.89292 18.0928ZM7.40002 13.9999L8.10713 13.2928C7.71661 12.9023 7.08344 12.9023 6.69292 13.2928L7.40002 13.9999ZM9.80002 16.3999L9.09292 17.107C9.48344 17.4975 10.1166 17.4975 10.5071 17.107L9.80002 16.3999ZM15.2 10.9999L15.9071 10.2928C15.5166 9.90227 14.8834 9.90227 14.4929 10.2928L15.2 10.9999ZM19.2929 16.507C19.6834 16.8975 20.3166 16.8975 20.7071 16.507C21.0977 16.1165 21.0977 15.4833 20.7071 15.0928L19.2929 16.507ZM3.30713 19.507L8.10713 14.707L6.69292 13.2928L1.89292 18.0928L3.30713 19.507ZM6.69292 14.707L9.09292 17.107L10.5071 15.6928L8.10713 13.2928L6.69292 14.707ZM10.5071 17.107L15.9071 11.707L14.4929 10.2928L9.09292 15.6928L10.5071 17.107ZM14.4929 11.707L19.2929 16.507L20.7071 15.0928L15.9071 10.2928L14.4929 11.707ZM5.00002 2.3999H17V0.399902H5.00002V2.3999ZM19.6 4.9999V16.9999H21.6V4.9999H19.6ZM17 19.5999H5.00002V21.5999H17V19.5999ZM2.40002 16.9999V4.9999H0.400024V16.9999H2.40002ZM5.00002 19.5999C3.56408 19.5999 2.40002 18.4358 2.40002 16.9999H0.400024C0.400024 19.5404 2.45951 21.5999 5.00002 21.5999V19.5999ZM19.6 16.9999C19.6 18.4358 18.436 19.5999 17 19.5999V21.5999C19.5405 21.5999 21.6 19.5404 21.6 16.9999H19.6ZM17 2.3999C18.436 2.3999 19.6 3.56396 19.6 4.9999H21.6C21.6 2.45939 19.5405 0.399902 17 0.399902V2.3999ZM5.00002 0.399902C2.45951 0.399902 0.400024 2.45939 0.400024 4.9999H2.40002C2.40002 3.56396 3.56408 2.3999 5.00002 2.3999V0.399902ZM7.60002 6.7999C7.60002 7.24173 7.24185 7.5999 6.80002 7.5999V9.5999C8.34642 9.5999 9.60002 8.3463 9.60002 6.7999H7.60002ZM6.80002 7.5999C6.3582 7.5999 6.00002 7.24173 6.00002 6.7999H4.00002C4.00002 8.3463 5.25363 9.5999 6.80002 9.5999V7.5999ZM6.00002 6.7999C6.00002 6.35807 6.3582 5.9999 6.80002 5.9999V3.9999C5.25363 3.9999 4.00002 5.2535 4.00002 6.7999H6.00002ZM6.80002 5.9999C7.24185 5.9999 7.60002 6.35807 7.60002 6.7999H9.60002C9.60002 5.2535 8.34642 3.9999 6.80002 3.9999V5.9999Z"
+                                    fill="black" />
+                            </svg>
+                        </button>
+                        <button class="add-comments_block_set_btn_code" title="Код" type="button">
+                            <svg class="add-comments_block_set_btn_svg" viewBox="0 0 22 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M9.7999 12.6998L12.1999 1.2998M4.9999 10.8998L1.3999 7.29981L4.9999 3.69981M16.9999 3.6998L20.5999 7.29981L16.9999 10.8998"
+                                    stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div> -->
+                    <div class="add-comments_block_error">
+                        <p class="add-comments_block_error_txt"></p>
+                    </div>
+                </div>  
+                <div class="add-comments_info">
+                    <div class="add-comments_info_name add-comments_info_block">
+                        <label class="add-comments_info_name_label add-comments_info_label" for="username">Ваше
+                            имя:</label>
+                        <input id="username" class="add-comments_info_name_input add-comments_info_input" type="text"
+                             />
+                        <div class="add-comments_info_name_error">
+                            <p class="add-comments_info_name_error_txt"></p>
+                        </div>
+                    </div>
+                    <div class="add-comments_info_date add-comments_info_block">
+                        <label class="add-comments_info_date_label add-comments_info_label" for="date">Введите
+                            дату</label>
+                        <input id="date" class="add-comments_info_date_input add-comments_info_input" type="date" />
+                    </div>
+                    <input class="add-comments_submit" type="submit" value="Отправить">
+                </div>
+            </form>
+        </div>
+        <div class="comments">
+        </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+
+</html>
