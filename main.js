@@ -147,8 +147,7 @@ const addComment = () => {
                 commentsBlockErrorBody.innerHTML = `Максимальная длина комментария ${maxLengthComments}`;
             }
         }
-        return 
-        // error('Некорректные данные');
+        throw 'Некорректные данные';
     }
 
     const id = comments && comments.length > 0 ? +comments[comments.length - 1].commentId + 1 : 1
@@ -174,9 +173,14 @@ const addComment = () => {
 document.querySelector('.add-comments').onsubmit = addComment;
 
 const initialized = () => {
-    comments = [...JSON.parse(localStorage.getItem('comment'))];
-    for (comment of comments) {
-        createComment(comment)
+    const localStorageComments = JSON.parse(localStorage.getItem('comment'));
+    if (localStorageComments) {
+        comments = localStorageComments;
+        if (comments && comments.length != 0) {
+            for (comment of comments) {
+                createComment(comment)
+            }
+        }
     }
 }
 
